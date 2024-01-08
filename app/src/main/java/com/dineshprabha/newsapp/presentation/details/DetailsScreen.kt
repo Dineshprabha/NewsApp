@@ -27,7 +27,6 @@ import com.dineshprabha.newsapp.domain.model.Article
 import com.dineshprabha.newsapp.presentation.Dimens.ArticleImageHeight
 import com.dineshprabha.newsapp.presentation.Dimens.MediumPadding1
 import com.dineshprabha.newsapp.presentation.details.components.DetailsTopBar
-import com.dineshprabha.newsapp.presentation.navgraph.Route
 import com.dineshprabha.newsapp.ui.theme.NewsAppTheme
 
 @Composable
@@ -62,7 +61,7 @@ fun DetailsScreen(
                     }
                 }
                            },
-            onBookmarkClick = { event(DetailsEvent.SaveArticle) },
+            onBookmarkClick = { event(DetailsEvent.UpsertDeleteArticle(article)) },
             onBackClick = navigateUp
         )
 
